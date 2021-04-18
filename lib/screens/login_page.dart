@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todolist/keys.dart';
 import 'package:todolist/network/auth.dart';
 import 'package:todolist/screens/tasks_page.dart';
 import 'package:todolist/tasks_repository.dart';
@@ -15,7 +16,6 @@ class _LoginPageState extends State<LoginPage> {
 
   String error = "";
 
-  GlobalKey<FormState> key = GlobalKey<FormState>();
 
   Authentication auth = Authentication();
 
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
               width: double.infinity,
             ),
             Form(
-              key: key,
+              key: Keys.key,
               child: Column(
                 children: [
                   TextFormField(
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   ElevatedButton(
                     onPressed: () async {
-                      if (key.currentState.validate()) {
+                      if (Keys.key.currentState.validate()) {
                         error =
                             await auth.login(email: email, password: password);
                         if (error == "") {

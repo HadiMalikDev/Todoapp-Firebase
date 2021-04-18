@@ -2,12 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class Authentication {
-  //Singleton class Declaration stuff
- // static final Authentication _authentication = Authentication._();
 
-  //Authentication._();
-
-//  factory Authentication() => _authentication;
 
   FirebaseAuth auth = FirebaseAuth.instance;
 

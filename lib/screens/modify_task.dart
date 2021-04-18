@@ -25,77 +25,77 @@ class ModifyTask extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        margin: EdgeInsets.all(10),
-        child: Form(
-          key: key,
-          child: Column(
-            children: [
-              Expanded(
-                child: Container(),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10),
-                child: TextFormField(
-                  initialValue: task1.title,
-                  validator: (val) {
-                    if (val == null)
-                      return 'Please enter Title';
-                    else
-                      title = val;
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    labelText: "Task Title",
-                    labelStyle: TextStyle(fontSize: 20),
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black, width: 2),
+      body: SingleChildScrollView(
+              child: Container(
+          margin: EdgeInsets.all(10),
+          child: Form(
+            key: key,
+            child: Column(
+              children: [
+                SizedBox(height: 50,),
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 10),
+                  child: TextFormField(
+                    initialValue: task1.title,
+                    validator: (val) {
+                      if (val == null)
+                        return 'Please enter Title';
+                      else
+                        title = val;
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      labelText: "Task Title",
+                      labelStyle: TextStyle(fontSize: 20),
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black, width: 2),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 10),
-                child: TextFormField(
-                  maxLines: 10,
-                  initialValue: task1.description,
-                  validator: (val) {
-                    if (val == null)
-                      return 'Please enter Description';
-                    else
-                      description = val;
-                    return null;
-                  },
-                  decoration: InputDecoration(
-                    labelText: "Task Description",
-                    labelStyle: TextStyle(fontSize: 20),
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black, width: 2),
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 10),
+                  child: TextFormField(
+                    maxLines: 10,
+                    initialValue: task1.description,
+                    validator: (val) {
+                      if (val == null)
+                        return 'Please enter Description';
+                      else
+                        description = val;
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      labelText: "Task Description",
+                      labelStyle: TextStyle(fontSize: 20),
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black, width: 2),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () async {
-                  if (key.currentState.validate()) {
-                    Navigator.pop(
-                        context, Task(title: title, description: description));
-                  }
-                },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.black),
-                ),
-                child: Text(
-                  "Save",
-                  style: TextStyle(
-                    fontSize: 15,
+                ElevatedButton(
+                  onPressed: () async {
+                    if (key.currentState.validate()) {
+                      Navigator.pop(
+                          context, Task(title: title, description: description));
+                    }
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.black),
+                  ),
+                  child: Text(
+                    "Save",
+                    style: TextStyle(
+                      fontSize: 15,
+                    ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: Container(),
-              ),
-            ],
+                SizedBox(
+                  height: 200,
+                ),
+              ],
+            ),
           ),
         ),
       ),
