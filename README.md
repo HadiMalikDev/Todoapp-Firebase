@@ -1,6 +1,6 @@
-# todolist
+# A simple Todo list app, made using Firebase Authentication and Firebase Database
 
-A new Flutter project.
+This is a simple app that allows addition of a task, removal of one,
 
 ## Getting Started
 
