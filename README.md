@@ -1,16 +1,9 @@
 # A simple Todo list app, made using Firebase Authentication and Firebase Database
 
-This is a simple app that allows addition of a task, removal of one,
+This is a simple app that allows addition of a task, removal of one, and editing of existing tasks. 
 
-## Getting Started
+The working of the app is shown below:
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+https://user-images.githubusercontent.com/78081816/115153982-0ab16780-a092-11eb-8d04-d104a5b89d79.mp4
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
